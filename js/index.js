@@ -1,7 +1,7 @@
 (function(){
-	/*$("body").on("contextmenu",function(){
+	$("body").on("contextmenu",function(){
        return false;
-    });*/
+    });
 	setTimeout(function(){
 		$("#dir").css("display","block");
 		$("#first b").remove();
@@ -18,12 +18,18 @@ function choise(obj,e) {
     	}
     	else if($(obj).val() == "./skills.exe"){
     		window.open("skills.html");
+            $("body").append('<div id="dir" style="padding-left: 20px;"><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
+            $("#dir input").focus();
     	}
     	else if($(obj).val() == "./works.exe"){
             window.open("works.html");
+            $("body").append('<div id="dir" style="padding-left: 20px;"><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
+            $("#dir input").focus();
     	}
     	else if($(obj).val() == "./connect.exe"){
             window.open("connect.html");
+            $("body").append('<div id="dir" style="padding-left: 20px;"><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
+            $("#dir input").focus();
     	}
     	else if($(obj).val() == "dir"){
     		$("body").append('<div id="dir" style="padding-left: 20px;"><br> Volume in drice C is OmarGM2294<br> Volume Serial Number is 1019-2294<br><br> Directory of C:<br><br> <a style="margin-right: 182px;">about_me.txt</a> 22/02/1994 12:00 p.m<br> <a style="margin-right: 200px;">skills.exe</a> 10/12/1996 12:00 p.m<br> <a style="margin-right: 210px;">works.exe</a>  06/02/2015 11:00 a.m<br> <a style="margin-right: 191px;">connect.exe</a>  04/12/2010 08:00 a.m<br> <a style="margin-left: 250px;">4 file(s) 1,301,926,830 bytes</a><br><br> ================================================<br> <a style="margin-left: 80px;">To execute a command, type "./"</a><br> <a style="margin-left: 70px;">follow by the name of the command</a><br><br> <a style="margin-left: 110px;">Example: ./about_me.txt</a><br> ================================================<br><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
@@ -33,7 +39,9 @@ function choise(obj,e) {
     		$("body").children().remove();
     		$("body").append('<div id="dir" style="padding-left: 20px;"><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
     		$("#dir input").focus();
-    	}else{
+    	}else if($(obj).val() == "exit"){
+            window.close();
+        }else{
     		$("body").append('<div id="error" style="padding-left: 20px;"><br>\''+$(obj).val()+'\' is not recognized as an internal or external command, operable program or batch file.<br><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
     		$(obj).css("disable", true);
     		$("#error input").focus();
