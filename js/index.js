@@ -7,20 +7,6 @@
 		$("#first b").remove();
 		$("#dir input").focus();
 	}, 500);
-	var panelList = $('#draggablePanelList');
-	panelList.sortable({
-            // Only make the .panel-heading child elements support dragging.
-            // Omit this to make then entire <li>...</li> draggable.
-            handle: '.panel-heading', 
-            update: function() {
-                $('.panel', panelList).each(function(index, elem) {
-                     var $listItem = $(elem),
-                         newIndex = $listItem.index();
-
-                     // Persist the new indices.
-                });
-            }
-        });
 })();
 
 function choise(obj,e) {
@@ -31,13 +17,13 @@ function choise(obj,e) {
     		$("#about_me input").focus();
     	}
     	else if($(obj).val() == "./skills.exe"){
-    		console.log("./skills.exe");
+    		window.open("skills.html");
     	}
     	else if($(obj).val() == "./works.exe"){
-    		console.log("./works.exe");
+            window.open("works.html");
     	}
     	else if($(obj).val() == "./connect.exe"){
-    		console.log("./connect.exe");
+            window.open("connect.html");
     	}
     	else if($(obj).val() == "dir"){
     		$("body").append('<div id="dir" style="padding-left: 20px;"><br> Volume in drice C is OmarGM2294<br> Volume Serial Number is 1019-2294<br><br> Directory of C:<br><br> <a style="margin-right: 182px;">about_me.txt</a> 22/02/1994 12:00 p.m<br> <a style="margin-right: 200px;">skills.exe</a> 10/12/1996 12:00 p.m<br> <a style="margin-right: 210px;">works.exe</a>  06/02/2015 11:00 a.m<br> <a style="margin-right: 191px;">connect.exe</a>  04/12/2010 08:00 a.m<br> <a style="margin-left: 250px;">4 file(s) 1,301,926,830 bytes</a><br><br> ================================================<br> <a style="margin-left: 80px;">To execute a command, type "./"</a><br> <a style="margin-left: 70px;">follow by the name of the command</a><br><br> <a style="margin-left: 110px;">Example: ./about_me.txt</a><br> ================================================<br><br><div style="margin-left: -20px;">C:\>  <input type="text" onkeypress="choise(this,event);" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/></div></div>');
