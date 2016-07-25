@@ -1,0 +1,52 @@
+body{
+	cursor: default;
+	background: #000;
+	color: #FFF;
+	padding: 10px;
+	font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+b{
+	-webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    -ms-animation: blink 1s infinite;
+    -o-animation: blink 1s infinite;
+ 	animation: blink 1s infinite;
+}
+
+#first{
+  	overflow: hidden;
+  	width: 30em;
+  	animation: type 4s steps(60, end); 
+}
+
+@keyframes blink{
+  	to{opacity: .0;}
+}
+
+::selection{
+  	background: black;
+}
+
+@keyframes type{ 
+  	from { width: 0; } 
+} 
+
+@keyframes type2{
+  	0%{width: 0;}
+  	50%{width: 0;}
+  	100%{ width: 100; } 
+}
+
+input[type="text"]{
+	background: none;
+	cursor: default;
+	color: #FFF;
+	border: none;
+	font-size: 1em;
+	font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+input:focus { 
+    outline:0;
+}
