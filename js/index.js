@@ -1,7 +1,7 @@
 (function(){
-	/*$("body").on("contextmenu",function(){
+	$("body").on("contextmenu",function(){
        return false;
-    });*/
+    });
 	setTimeout(function(){
 		$("#dir").css("display","block");
 		$("#first b").remove();
