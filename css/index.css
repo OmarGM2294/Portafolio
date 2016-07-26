@@ -1,3 +1,9 @@
+@media (max-width: 411px){
+	body{
+		font-size: 0.7em;
+	}
+}
+
 body{
 	cursor: default;
 	background: #000;
@@ -5,6 +11,7 @@ body{
 	padding: 10px;
 	font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
 }
+
 b{
 	-webkit-animation: blink 1s infinite;
     -moz-animation: blink 1s infinite;

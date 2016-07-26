@@ -73,7 +73,7 @@ function expand(obj){
         $(obj).parent().parent().find("iframe").css("height",$(window).height());
         $(obj).parent().parent().offset({ top: 0, left: 0 });
     }else{
-        $(obj).parent().parent().css("width","40%"); 
+        $(obj).parent().parent().css("width","400px"); 
         $(obj).parent().parent().css("height","300px");   
         $(obj).parent().parent().find("iframe").css("width","100%");
         $(obj).parent().parent().find("iframe").css("height","300px");
