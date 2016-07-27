@@ -1,3 +1,6 @@
+var memory = [];
+var cont = 0;
+
 (function(){
 	$("body").on("contextmenu",function(){
        return false;
@@ -8,6 +11,22 @@
 		$("#dir input").focus();
 	}, 500);
     $(".window").draggable();
+    $("body").keydown(function(event) {
+        if( event.which == 38 ){
+            if(cont > 0){
+                cont--;
+                $("input").last().val(memory[cont]);
+            }else if(cont == 0){
+                $("input").last().val("");                
+            }
+        }else if(event.which == 40){
+            if(cont < memory.length){
+                $("input").last().val(memory[cont++]);
+            }else if(cont == memory.length){
+                $("input").last().val("");
+            }         
+        }
+    });
 })();
 
 function choise(obj,e) {
@@ -62,6 +81,8 @@ function choise(obj,e) {
     		$(obj).css("disable", true);
     		$("#error input").focus();
     	}
+        memory.push($(obj).val());
+        cont = memory.length;
     }
 }
 
