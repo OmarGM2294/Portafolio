@@ -1,0 +1,43 @@
+.progress{
+    margin-bottom: 0px;
+}
+
+.list-unstyled li{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #CCC;
+}
+
+li .col-xs-10{
+    position: absolute;
+    top: 50%;
+    transform: translate(15%, -50%);
+}
+
+li .col-xs-12{
+    height: 100px;
+}
+
+li .col-xs-2{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.navbar-nav{
+    color: #fff;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+img{
+    width: 70px;
+}
