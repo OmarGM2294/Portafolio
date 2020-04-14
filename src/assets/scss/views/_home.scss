@@ -1,0 +1,84 @@
+.home {
+  cursor: default;
+  background: #000;
+  color: #FFF;
+  font-family: "Lucida Console";
+  min-height: 100vh;
+  padding: 10px;
+
+  &__heading {
+    font-size: 18px;
+  }
+
+  &__template {
+    display: flex;
+    margin: 20px 0;
+
+    p {
+      animation: type 0.5s steps(11, end);
+      display: inline-block;
+      margin: 0 0 0 10px;
+      overflow: hidden;
+      text-overflow: clip;
+      width: 59px;
+      white-space: nowrap;
+
+      b {
+        animation: blink 1s infinite;
+        animation: hide 0.1s 1.2s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &__result {
+    animation: show 0.1s 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    width: min-content;
+
+    p {
+      text-align: center;
+    }
+      
+    &--center {
+      text-align: center;
+    }
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__user {
+    animation: show 0.1s 1.2s;
+    animation-fill-mode: forwards;
+    display: flex;
+    opacity: 0;
+    margin: 20px 0;
+
+    input {
+      background: none;
+      border: none;
+      color: #FFF;
+      font-family: "Lucida Console";
+      font-size: 16px;
+      flex-grow: 1;
+      margin-left: 10px;
+      margin-top: -2px;
+
+      &:focus {
+        outline:0;
+      }
+    }
+  }
+
+  &__about {
+    width: min-content;
+
+    p {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.work {
+
+  &__item {
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    h3 {
+      color: #0e0ec7;
+    }
+  
+    i {
+      font-size: 12px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    h3, p {
+      display: flex;
+      font-weight: bold;
+      justify-content: space-between;
+    }
+  }
+}
